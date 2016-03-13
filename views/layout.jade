@@ -1,0 +1,57 @@
+doctype html
+html(lang="es")
+    head
+        title Foto
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css", rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
+        link(href="/public/css/app.css", rel="stylesheet")
+        link(href="/public/css/clases.css", rel="stylesheet")
+    body
+        nav(class="navbar navbar-default")
+            div(class="container-fluid")
+                div(class="navbar-header")
+                    button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                        span(class="sr-only") Toggle navigation
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                    a(class="navbar-brand" href="/app") #[i(class="fa fa-cube p-5 c-blue-base")] ISC-Admin
+                div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+                    ul(class="nav navbar-nav")
+                        li(class="active")
+                            a(href="#") Link 
+                                span(class="sr-only") (current)
+                        li
+                            a(href="#") Link
+                        li(class="dropdown")
+                            a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ) Dropdown
+                                span(class="caret")
+                            ul(class="dropdown-menu")
+                                li
+                                    a(href="#") Action
+                                li
+                                    a(href="#") Another action
+                                li
+                                    a(href="#") Something else here
+                                li(role="separator" class="divider")
+                                    li
+                                        a(href="#") Separated link
+                                li(role="separator" class="divider")
+                                    li
+                                        a(href="#") One more separated link
+                    form(class="navbar-form navbar-left" role="search")
+                        div(class="form-group")
+                            input(type="text" class="form-control" placeholder="Search")
+                        button(type="submit" class="btn btn-default") Submit
+                    ul(class="nav navbar-nav navbar-right")                        
+                        if user
+                            li
+                                a(href="/cerrar") #[i(class="fa fa-power-off p-5 c-red")]  #{user.email}
+                                     
+    block contenido
+    script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
